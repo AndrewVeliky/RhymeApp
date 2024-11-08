@@ -1,0 +1,15 @@
+# require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+platform :ios, '12.0'
+
+project '/Users/avelykyi/RymeApp/RhymeApp/ios/RhymeApp/RhymeApp.xcodeproj'
+
+    target 'RhymeApp' do
+        use_frameworks!
+      
+        # Правильний шлях до залежностей
+        pod 'React', :path => '/Users/avelykyi/RymeApp/RhymeApp/node_modules/react-native/'
+        pod 'React-Core', :path => '/Users/avelykyi/RymeApp/RhymeApp/node_modules/react-native/React/Core'
+        pod 'React-RCTText', :path => '/Users/avelykyi/RymeApp/RhymeApp/node_modules/react-native/Libraries/Text'
+        pod 'React-ART', :path => '/Users/avelykyi/RymeApp/RhymeApp/node_modules/react-native/Libraries/ART'
+        # Додай інші залежності, якщо необхідно
+      end
